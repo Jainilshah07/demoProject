@@ -3,7 +3,7 @@ import React from 'react'
 const Bonds = () => {
   return (
     <div>
-      heyy
+
     </div>
   )
 }
