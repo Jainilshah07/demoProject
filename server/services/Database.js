@@ -1,19 +1,10 @@
 const mongoose = require("mongoose");
+const uri = "mongodb+srv://Unscript:Unscript23@cluster0.ionptdl.mongodb.net/Project?retryWrites=true&w=majority"
 
-const URI = "mongodb://localhost:27017/demoJS";
+mongoose.set("strictQuery", false);
 
-const connectToMongo = () => {
-    // Connecting to the database
-    mongoose
-        .connect(URI)
-        .then(() => {
-            console.log("Successfully connected to database");
-        })
-        .catch((error) => {
-            console.log("database connection failed. exiting now...");
-            console.error(error);
-            process.exit(1);
-        });
-};
-
-module.exports = connectToMongo;
+mongoose.connect(uri).then(() => {
+    console.log("Connection successfull with Databse");
+}).catch((e) => {
+    console.log(e);
+})

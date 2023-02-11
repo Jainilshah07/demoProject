@@ -1,19 +1,15 @@
 const express = require("express");
-const connectToMongo = require("./services/Database");
-// const cors = require("cors");
-// const bodyParser = require("body-parser")
-port = 8000
-
+require("./services/Database");
 const app = express();
-
-connectToMongo();
-
-// app.use(bodyParser.json({ extended: true }));
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(cors());
+const Port = process.env.PORT || 8000;
 
 app.use(express.json());
 
-app.listen(8000, () => {
-    console.log("Listening on port 8000");
+app.get("/", (req, res) => {
+    res.send("Helloo");
+})
+
+
+app.listen(Port, () => {
+    console.log(`Connection successfull on port ${Port}`);
 })
