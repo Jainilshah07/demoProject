@@ -5,6 +5,11 @@ const Port = process.env.PORT || 8000;
 
 app.use(express.json());
 
+//Routes
+app.use("/api/User", require("./routes/User"));
+
+app.use("/api/User", require("./routes/User"));
+
 app.get("/", (req, res) => {
     res.send("Helloo");
 })
