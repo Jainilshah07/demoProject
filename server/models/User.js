@@ -32,6 +32,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         //required: true
     },
+    Portfolio: {
+        metadata: [{ bondname: String, price: Number, qty: Number, series: String, type: String }],
+    },
 })
 
 
