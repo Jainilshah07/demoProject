@@ -1,9 +1,17 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/Home'
+import Login from './pages/login/Login';
 
 function App() {
   return (
     <div className="App bg-red-300 text-7xl font-bold">
-      HEy JS Here!!!
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<Home/>} ></Route>
+          <Route exact path='login' element={<Login />} > </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
