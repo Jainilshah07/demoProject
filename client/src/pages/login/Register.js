@@ -1,14 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from "../../axios";
+// import axios from "../../axios";
+import axios from 'axios';
 
 const Register = () => {
     const navigate = useNavigate();
     const [input, setInput] = useState({
         FirstName:"",
-        LastName:"",
-        Email: "",
+        EmailId:"",
         MobileNo:"",
         AadharNum:"",
         Password:"",
@@ -27,10 +27,11 @@ const Register = () => {
 
       const SubmitHandler = async (e) => {
         e.preventDefault();
-        const user = { FirstName:input.FirstName, LastName:input.LastName,  Email: input.Email, Password: input.Password }
+        const user = { FirstName:input.FirstName, AadharNum:"",MobileNo:"", EmailId: input.EmailId, Password: input.Password }
+        // console.log(user);
         try {
           if (user) {
-            const res = await axios.post("/Register", user);
+            const res = await axios.post("http://localhost:8000/api/User/register", user);
             console.log(res.data);
             navigate("/login")
           }
@@ -38,7 +39,7 @@ const Register = () => {
           console.log("error form content", error)
         }
         setInput({
-            FirstName:"",LastName:"",Email: "",AadharNum:"",MobileNo:"",Password: "",CPassword: "",
+            FirstName:"",LastName:"",EmailId:"",AadharNum:"",MobileNo:"",Password: "",CPassword: "",
         });
       };
 
@@ -70,7 +71,7 @@ const Register = () => {
                             Email
                         </label>
                         <input
-                            type="Email" name="Email" value={input.Email} onChange={InputHandler}
+                            type="email" name="EmailId" value={input.EmailId} onChange={InputHandler}
                             className="block w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
@@ -122,15 +123,24 @@ const Register = () => {
                             className="block w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
+
+                    <div className="flex">
+                        <Link className='text-md text-gray-400 text-left ml-10 underline'>Click here to send OTP</Link>
+                        <input
+                            type="text" name="OTP" value={input.OTP} onChange={InputHandler}
+                            className="block w-48 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                    </div>
                     
                     <div className="mt-4">
-                    <button type="button" class="bg-gradient-to-r from-green-400 to-blue-300  w-36 rounded-3xl h-10">Register</button>
+                    <button onClick={SubmitHandler} type="button" class="bg-gradient-to-r from-green-400 to-blue-300  w-36 rounded-3xl h-10">Register</button>
                     </div>
+                    
                 </form>
 
                 <p className="mt-4 text-xs font-light text-center text-gray-400 ">
                     Already have an account?
-                    <Link to="/login" className="font-medium text-indigo-600 hover:underline">
+                    <Link to='/login' className="font-medium text-indigo-600 hover:underline">
                         Log in
                     </Link>
                 </p>

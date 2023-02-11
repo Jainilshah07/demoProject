@@ -7,6 +7,7 @@ import Register from './pages/login/Register';
 import Collection from './components/Collection';
 import Footer from './components/Footer';
 import Funds from './components/Funds';
+import Kyc from './pages/login/Kyc';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/collections' element={<Collection />} ></Route>
           <Route exact path='/funds' element={<Funds />} ></Route>
           <Route exact path='/portfolio' element={<Login />} ></Route>
+          <Route exact path='/kyc' element={<Kyc />} ></Route>
           {/* <Route exact path='login' element={<Login />} ></Route> */}
         </Routes>
         <Footer/>
