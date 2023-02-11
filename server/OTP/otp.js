@@ -4,8 +4,8 @@ var express = require("express");
 const app = express()
 
 var options = {
-    authorization: 'cwLvh5WSXKTenoU0VBR723CPIfGyaHNOk8lMbs1QY69DFdizmEo8K7b4jyPxsmtkQWdZEILBNnSMOqU2', message: "OTP is 554422",
-    numbers: ['7620861988']
+    authorization: 'cwLvh5WSXKTenoU0VBR723CPIfGyaHNOk8lMbs1QY69DFdizmEo8K7b4jyPxsmtkQWdZEILBNnSMOqU2', message: "",
+    numbers: ['9326165833']
 };
 
 fast2sms.sendMessage(options)
