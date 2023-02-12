@@ -7,45 +7,46 @@ import axios from 'axios';
 const Register = () => {
     const navigate = useNavigate();
     const [input, setInput] = useState({
-        FirstName:"",
-        EmailId:"",
-        MobileNo:"",
-        AadharNum:"",
-        Password:"",
-        CPassword:"",
+        FirstName: "",
+        LastName: "",
+        EmailId: "",
+        MobileNo: "",
+        AadharNum: "",
+        Password: "",
+        CPassword: "",
     });
 
     const InputHandler = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-    
-        setInput({
-          ...input,
-          [name]: value,
-        });
-      };
 
-      const SubmitHandler = async (e) => {
+        setInput({
+            ...input,
+            [name]: value,
+        });
+    };
+
+    const SubmitHandler = async (e) => {
         e.preventDefault();
-        const user = { FirstName:input.FirstName, AadharNum:"",MobileNo:"", EmailId: input.EmailId, Password: input.Password }
+        const user = { FirstName: input.FirstName, LastName: input.LastName, AadharNum: "", MobileNo: "", EmailId: input.EmailId, Password: input.Password }
         // console.log(user);
         try {
-          if (user) {
-            const res = await axios.post("http://localhost:8000/api/User/register", user);
-            console.log(res.data);
-            navigate("/login")
-          }
+            if (user) {
+                const res = await axios.post("http://localhost:8000/api/User/register", user);
+                console.log(res.data);
+                navigate("/login")
+            }
         } catch (error) {
-          console.log("error form content", error)
+            console.log("error form content", error)
         }
         setInput({
-            FirstName:"",LastName:"",EmailId:"",AadharNum:"",MobileNo:"",Password: "",CPassword: "",
+            FirstName: "", LastName: "", LastName: "", EmailId: "", AadharNum: "", MobileNo: "", Password: "", CPassword: "",
         });
-      };
+    };
 
     return (
-        <div className="relative flex flex-col justify-center min-h-fit overflow-hidden mt-4">
-            <div className="w-[27rem] p-6 m-auto bg-sky-900 rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-black lg:max-w-xl">
+        <div className="relative flex flex-col justify-center min-h-fit overflow-hidden mt-0 md:mt-4 md:mb-4">
+            <div className="m-2 md:w-[27rem] p-6 md:m-auto bg-sky-900 rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-black md:max-w-xl">
                 <h1 className="text-2xl font-semibold text-center text-gray-400 ">
                     Register
                 </h1>
@@ -58,21 +59,31 @@ const Register = () => {
                             First Name
                         </label>
                         <input
-                            type="text" name="FirstName" value={input.FirstName}  onChange={InputHandler}
-                            className="block w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            type="text" name="FirstName" value={input.FirstName} onChange={InputHandler}
+                            className="block w-48 md:w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                        <label
+                            for="FirstName"
+                            className="block text-sm font-semibold text-gray-400 text-left ml-10 "
+                        >
+                            Last Name
+                        </label>
+                        <input
+                            type="text" name="LastName" value={input.LastName} onChange={InputHandler}
+                            className="block w-48 md:w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
-                   
+
                     <div className="mb-2">
                         <label
-                            for="Email" 
+                            for="Email"
                             className="block text-sm font-semibold text-gray-400 text-left ml-10"
                         >
                             Email
                         </label>
                         <input
                             type="email" name="EmailId" value={input.EmailId} onChange={InputHandler}
-                            className="block w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            className="block w-48 md:w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
                     <div className="mb-2">
@@ -83,8 +94,8 @@ const Register = () => {
                             Mobile Number
                         </label>
                         <input
-                            type="text" name="MobileNo" value={input.MobileNo}  onChange={InputHandler}
-                            className="block w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            type="text" name="MobileNo" value={input.MobileNo} onChange={InputHandler}
+                            className="block w-48 md:w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
                     <div className="mb-2">
@@ -96,7 +107,7 @@ const Register = () => {
                         </label>
                         <input
                             type="text" name="AadharNum" value={input.AadharNum} onChange={InputHandler}
-                            className="block w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            className="block w-48 md:w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
                     <div className="mb-2">
@@ -107,8 +118,8 @@ const Register = () => {
                             Password
                         </label>
                         <input
-                            type="text" name="Password" value={input.Password} onChange={InputHandler}
-                            className="block w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            type="Password" name="Password" value={input.Password} onChange={InputHandler}
+                            className="block w-48 md:w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
                     <div className="mb-2">
@@ -119,23 +130,17 @@ const Register = () => {
                             Confirm Password
                         </label>
                         <input
-                            type="text" name="CPassword" value={input.CPassword} onChange={InputHandler}
-                            className="block w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            type="Password" name="CPassword" value={input.CPassword} onChange={InputHandler}
+                            className="block w-48 md:w-72 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
 
-                    <div className="flex">
-                        <Link className='text-md text-gray-400 text-left ml-10 underline'>Click here to send OTP</Link>
-                        <input
-                            type="text" name="OTP" value={input.OTP} onChange={InputHandler}
-                            className="block w-48 ml-9 px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-3xl focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                    </div>
-                    
+
+
                     <div className="mt-4">
-                    <button onClick={SubmitHandler} type="button" class="bg-gradient-to-r from-green-400 to-blue-300  w-36 rounded-3xl h-10">Register</button>
+                        <button onClick={SubmitHandler} type="button" class="bg-gradient-to-r from-green-400 to-blue-300  w-36 rounded-3xl h-10">Register</button>
                     </div>
-                    
+
                 </form>
 
                 <p className="mt-4 text-xs font-light text-center text-gray-400 ">
