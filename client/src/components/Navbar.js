@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link to="/bonds" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
             <span>Bonds</span>
           </Link>
-          <Link to="/let's-learn" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
+          <Link to="/begineer-guide" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">
             <span>Beginner's Guide</span>
           </Link>
           <Link to="/" className="block lg:inline-block text-base lg:mt-0 text-black hover:bg-gray-200 p-2 hover:rounded-full mr-4 lg:mr-8">

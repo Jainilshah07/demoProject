@@ -7,7 +7,7 @@ const Funds = () => {
       <div className="col-span-1"></div>
       <div className="col-span-2">
         <div className="row">
-          <div className="bg-gray-200 my-auto p-5 ml-6 font-medium rounded-md border-0 border-gray-400">
+          <div className="bg-gray-200 my-auto p-5 font-medium rounded-md border-2 border-gray-400">
             <p className="font-bold">Total Amount</p>
             <p className="font-semibold">368</p>
             <p>be safe</p>
@@ -15,7 +15,7 @@ const Funds = () => {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row bg-gray-200 border-gray-400 h-screen py-3">
           <div className="grid grid-cols-5">
             <div className="col-span-1"></div>
             <div className="col-span-2">
@@ -38,6 +38,11 @@ const Funds = () => {
             </div>
           </div>
         </div>
+
+        <div className="row">
+          
+        </div>
+
       </div>
     </div>
   );
