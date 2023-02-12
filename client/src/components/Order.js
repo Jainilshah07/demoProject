@@ -1,5 +1,12 @@
 import React from "react";
+import BondChart from "./BondChart";
+import { useNavigate } from "react-router-dom";
+
 const Order = () => {
+    const navigate = useNavigate();
+    const handleSubmit = ()=>{
+        navigate("/portfolio");
+    }
   return (
     <>
       <div className="row border-2 rounded-lg overflow-hidden shadow-lg  mt-5 mb-5 h-20 bg-gradient-to-br from-pink-200  via-purple-300 to-blue-200">
@@ -37,10 +44,16 @@ const Order = () => {
       </div>
       <div className="mt-4">
         <button
+        onClick={handleSubmit}
           type="button"
           class="bg-blue-200  w-36 rounded-3xl h-10 float-right mr-8">
           Buy
         </button>
+      </div>
+
+
+      <div className="mt-12 ml-[420px] h-96">
+        <BondChart />
       </div>
 
     </>
