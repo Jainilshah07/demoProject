@@ -46,7 +46,7 @@ const Collection = () => {
                         >
                           {data.SERIES}
                         </label>
-                        <p className="block text-sm text-black">{data.BOND_TYPE} </p>
+                        <p className="block text-sm text-black"></p>
                       </div>
                       <div>
                         <label
@@ -76,9 +76,9 @@ const Collection = () => {
                           for="couponrate"
                           className="block text-sm font-semibold text-gray-400  "
                         >
-                          Coupon Rate
+                          LTP
                         </label>
-                        <p className="block text-sm  text-black ">8.75</p>
+                        <p className="block text-sm  text-black ">{data.LTP}</p>
                       </div>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ const Collection = () => {
                         >
                           Face Value
                         </label>
-                        <p className="block text-sm  text-black">1000.00</p>
+                        <p className="block text-sm  text-black">10000</p>
                       </div>
                       <button
                         onClick={handleSubmit}
