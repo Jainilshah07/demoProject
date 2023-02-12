@@ -1,12 +1,26 @@
 import React from 'react';
 import Cards from './Cards';
 import Card1 from '../components/Card1';
-// import Homestyles from '../pages/Homestyles.css';
+import { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import bg from '../assets/hero-bg.jpg';
 import About from './About';
-import Beginner from './Beginner';
-import { Link } from 'react-router-dom';
+import BeginnerGuide from './BeginnerGuide';
+
 const Home = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem('signature')){
+           console.log("loggin succes")
+        }
+        else{
+          navigate("/login");
+          console.log("Not loggin")
+        }
+        // eslint-disable-next-line
+      },[]);
+
     return (
         <>
             <div className='styles h-screen overflow-hidden opacity-70' style={{ backgroundImage: `url(${bg})`, }}>
@@ -14,7 +28,7 @@ const Home = () => {
                 <p className="mt-5 text-white">Bond trading is a way for investors to diversify their portfolios and earn a <br/>steady stream of income through the interest payments. Bond prices can fluctuate <br/>based on a variety of factors, such as changes in interest rates, economic conditions, <br/>and the issuer's creditworthiness, making bonds a potentially profitable investment for traders. </p>
             </div>
             <About/>
-            <Beginner />
+            <BeginnerGuide/> 
             <div>
                 <h1 className='mt-20 font-semibold text-3xl'>Bonds Collection</h1>
             <div className="row px-48 mt-20 ">

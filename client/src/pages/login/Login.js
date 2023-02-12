@@ -31,6 +31,7 @@ const Login = () => {
             if (user) {
                 const res = await axios.post("http://localhost:8000/api/User/login", user);
                 console.log(res.data);
+                localStorage.setItem("signature",res.data.signature)
                 navigate("/")
             }
         } catch (error) {
