@@ -7,9 +7,9 @@ const Funds = () => {
       <div className="col-span-1"></div>
       <div className="col-span-2">
         <div className="row">
-          <div className="bg-gray-200 my-auto p-5 ml-6 mr-3 font-medium rounded-md border-0 border-gray-400">
-            <p>Total Amount</p>
-            <p>368</p>
+          <div className="bg-gray-200 my-auto p-5 ml-6 font-medium rounded-md border-0 border-gray-400">
+            <p className="font-bold">Total Amount</p>
+            <p className="font-semibold">368</p>
             <p>be safe</p>
 
           </div>
