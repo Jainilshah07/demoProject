@@ -45,7 +45,7 @@ const Register = () => {
     };
 
     return (
-        <div className="relative flex flex-col justify-center min-h-fit overflow-hidden mt-0 md:mt-4 md:mb-4">
+        <div className="relative bg-gradient-to-tr from-pink-200 to-blue-200 flex flex-col justify-center min-h-fit overflow-hidden pt-0 md:pt-4 md:pb-4">
             <div className="m-2 md:w-[27rem] p-6 md:m-auto bg-sky-900 rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-black md:max-w-xl">
                 <h1 className="text-2xl font-semibold text-center text-gray-400 ">
                     Register

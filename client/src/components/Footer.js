@@ -1,8 +1,5 @@
 import React from 'react'
-// import logo from '../../assets/InitLogo.svg'
-// import whitelinkedin from '../../assets/LinkedInWhite.svg'
-// import whiteinsta from '../../assets/InstaWhite.svg'
-// import whiteglobe from '../../assets/GlobeWhite.svg'
+import logo from '../assets/logo.png';
 import sublist from '../assets/sublist.svg'
 import line from '../assets/Line.svg'
 import nse from '../assets/NSElog.jpg'
@@ -17,7 +14,8 @@ const Footer = () => {
               <div className='text-white text-center mb-2 text-xl font-semibold'>About Us</div>
             </div>
             <div className="row">
-                {/* <img src={logo} className="mx-auto" alt="" /> */}
+                {/* <img src={logo} className="w-24 mx-auto h-24 pt-4"></img> */}
+                
             </div>
         </div>
 

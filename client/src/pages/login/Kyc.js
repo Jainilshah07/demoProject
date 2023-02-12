@@ -60,7 +60,7 @@ const Kyc = () => {
       };  
   return (
     <div>
-      <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+      <div className="relative bg-gradient-to-tr from-pink-200 to-blue-200 flex flex-col justify-center min-h-screen overflow-hidden">
             <div className="w-[27rem] p-6 m-auto bg-sky-900 rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-black lg:max-w-xl">
                 <h1 className="text-3xl font-semibold text-center text-gray-400 ">
                   Validate your KYC
@@ -92,7 +92,7 @@ const Kyc = () => {
                         />
                     </div>
                     <div className="mt-6">
-                    <button onClick={SubmitHandler} type="button" class="bg-gradient-to-r from-green-400 to-blue-300  w-36 rounded-3xl h-10">Click here to get OTP</button>
+                    <button onClick={SubmitHandler} type="button" class="p-2 bg-gradient-to-r from-green-400 to-blue-300  w-36 rounded-3xl h-16 mb-3">Click here to get OTP</button>
                     </div>
 
                     <div className="mb-2">
