@@ -6,7 +6,7 @@ import small_circle from "../assets/small_circle.svg";
 import long_horizontal from "../assets/long_horizontal.svg";
 // import LiveWave from "./LiveWave";
 
-const Roadmap = () => {
+const Beginner = () => {
   return (
     <div className="bg-gradient-to-tr from-pink-200 to-blue-200">
       {/* <div>
@@ -32,7 +32,8 @@ const Roadmap = () => {
             {/* <p className="text-3xl">13TH OCT</p> */}
             <p className="text-[#029090] mt-5 text-3xl">Bonds For senior Citizen</p>
             <p className="pe-2 mr-4 text-justify text-base mt-2 ">
-            First, it allows the club to share its knowledge and passion for AI with the next generation of students. By introducing junior students to the field early on, the club hopes to inspire and encourage them to pursue their interests in AI and technology.
+            It is a fixed income security which allows a lender to lend a
+        predetermined amount of funds and be eligible for intrest on those funds
             </p>
             <p className="pe-2 mr-4 text-justify text-base mt-2 ">
             Second, the lectures provide an opportunity for junior students to learn about the latest developments and advancements in AI. This knowledge will be valuable for them as they begin to study the subject in more depth in their later years.
@@ -121,4 +122,4 @@ const Roadmap = () => {
   );
 };
 
-export default Roadmap;
+export default Beginner;
