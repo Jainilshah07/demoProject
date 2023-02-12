@@ -25,7 +25,7 @@ const Collection = () => {
     getApiData();
   }, []);
   return (
-    <div className="grid grid-cols-3 bg-gradient-to-br from-pink-400 via-purple-300 to-blue-400">
+    <div className="grid grid-cols-1 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 bg-gradient-to-br from-pink-400 via-purple-300 to-blue-400">
       {myData.map((data, index) => {
         if (index < 9) {
           return (
