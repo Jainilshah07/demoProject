@@ -14,7 +14,7 @@ router.post("/validate-user", async (req, res) => {
     var options = {
         authorization:
             "cwLvh5WSXKTenoU0VBR723CPIfGyaHNOk8lMbs1QY69DFdizmEo8K7b4jyPxsmtkQWdZEILBNnSMOqU2",
-        message: `Otp is ${createotp}`,
+        message: `OTP for KYC Registration is ${createotp}`,
         numbers: [number],
     };
     fast2sms

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className='bg-[#4051a3] py-8'>
+    <div className='bg-zinc-700 py-8'>
         <div className='row grid lg:grid-cols-12 grid-cols-1'>
         <div className="lg:col-span-3 lg:mb-2 lg:mt-1 mt-4">
             <div className="row">
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         <div className="lg:col-span-3 text-white lg:mt-1 mt-8">
-            <p className='pb-2 text-center text-xl font-semibold'>Location</p>
+            <p className='pb-2 text-center text-xl font-semibold text-white'>Location</p>
             <div className="flex font-medium">
               <img src={line} className="object-left lg:block sm:hidden" alt="" />
               <p className='text-center pt-8 px-auto'>
