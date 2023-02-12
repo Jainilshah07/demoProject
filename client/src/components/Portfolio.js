@@ -27,7 +27,7 @@ function Portfolio() {
   return (
     <div className="row border-2 rounded-lg overflow-hidden shadow-lg  py-5 mb-5 bg-gradient-to-br from-pink-400 via-purple-200 to-white">
       <div className="row">
-        <table class="table-auto font-bold border-spacing-x-1 border-separate my-2 ">
+        <table class="table-auto mx-auto font-bold border-spacing-x-1 border-separate my-2 ">
           <thead>
             <tr>
               <th className=" border border-slate-600 mx-2 md:px-8">Bond Name</th>
@@ -55,34 +55,12 @@ function Portfolio() {
           })}
         </table>
       </div>
-      {/* <div className="row">
-        <div className="grid grid-cols-5 font-bold my-2">
-          <div>Bond Name</div>
-          <div>Value</div>
-          <div>QTY</div>
-          <div>Series</div>
-          <div>LTP</div>
-        </div>
-        <hr />
-      </div>
-      {myData.map((data, index) => {
-        if (index < 6) {
-          return (
-            <div className="row">
-              <div className="grid grid-cols-5 py-1 font-medium">
-                <div>{data.SYMBOL}</div>
-                <div>{data.VALUE}</div>
-                <div>Regular</div>
-                <div>{data.SERIES}</div>
-                <div>{data.LTP}</div>
-              </div>
-            </div>
-          );
-        }
-      })} */}
 
-      <div className="h-96 min-w-full pb-10 ml-5 md:ml-[560px] ">
-        <BondPieChart />
+      <div className="row min-w-full pb-10">
+        <div className="mx-auto">
+          <BondPieChart />
+        </div>
+        
       </div>
     </div>
   );

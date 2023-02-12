@@ -12,6 +12,7 @@ import Beginner from './components/Beginner';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Home from './components/Home';
+import Book from './components/Book';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route exact path='/begineer-guide' element={<Beginner />} ></Route>
           <Route exact path='/portfolio' element={<Portfolio />} ></Route>
           <Route exact path='/about-us' element={<About />} ></Route>
+          <Route exact path='/book' element={<Book />} ></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

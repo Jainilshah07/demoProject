@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Book() {
   return (
-    <div className="row ">
+    <div className="row from-pink-200  via-purple-300 to-blue-200">
       <div className="grid grid-cols-2 bg-gradient-to-br from-pink-200  via-purple-300 to-blue-200">
         {/* column1 */}
         <div className="w-[27rem] ml-64 ">
@@ -61,7 +62,6 @@ function Book() {
             </div>
           </form>
         </div>
-        {/* row1col2 */}
         <div className="mt-4 border-2 rounded-lg overflow-hidden shadow-md h-72 w-[27rem] bg-white shadow-blue-300 border-blue-900">
           <p className="font-bold">Trade Information</p>
           <div className="row">
@@ -128,7 +128,6 @@ function Book() {
             </div>
           </div>
         </div>
-        {/* column2 */}
 
         <div className="mt-3 border-2 rounded-lg overflow-hidden shadow-md h-72 w-[27rem] ml-64 bg-white shadow-blue-300 border-blue-900">
           <p className="font-bold">Price Information</p>
@@ -208,7 +207,6 @@ function Book() {
             </div>
           </div>
         </div>
-        {/* colum2row2 */}
 
         <div className="mt-3 border-2 rounded-lg overflow-hidden shadow-md h-72 w-[27rem] bg-white mb-6 shadow-blue-300 border-blue-900">
           <p className="font-bold">Value at risk</p>
@@ -298,10 +296,12 @@ function Book() {
             </div>
           </div>
         </div>
-        {/*  */}
+        <div className="pb-4">
+        <Link to='/portfolio' ><button className="bg-blue-700 w-36 rounded-3xl text-white h-10 float-right ">Place Order</button></Link>
       </div>
+      </div>
+      
     </div>
-    // </div>
   );
 }
 

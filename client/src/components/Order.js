@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Order = () => {
     const navigate = useNavigate();
     const handleSubmit = ()=>{
-        navigate("/portfolio");
+        navigate("/book");
     }
   return (
     <>

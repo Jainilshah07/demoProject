@@ -5,6 +5,7 @@ import Card1 from '../components/Card1';
 import bg from '../assets/hero-bg.jpg';
 import About from './About';
 import Beginner from './Beginner';
+import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <>
@@ -24,8 +25,8 @@ const Home = () => {
 
                 </div>
             </div>
-            <div className="mr-12">
-                <button type="button" class="bg-blue-300  w-36 rounded-3xl h-10 float-right ">Know More</button>
+            <div className="mr-12 pb-12">
+                <Link to="/collections"><button type="button" className="bg-blue-300  w-36 rounded-3xl h-10 float-right ">Know More</button></Link>
             </div>
             </div> 
         </>
