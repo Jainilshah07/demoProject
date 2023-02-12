@@ -26,7 +26,7 @@ function App() {
           {/* <Route exact path='/c' element={<Kyc />} ></Route> */}
           {/* <Route exact path='login' element={<Login />} ></Route> */}
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
